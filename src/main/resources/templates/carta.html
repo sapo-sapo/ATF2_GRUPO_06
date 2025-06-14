@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/fragments/layout :: head('carta')}"></head>
+
+<body>
+
+    <header th:replace="~{/fragments/layout :: header}"></header>
+    
+    <main>
+        <section class="container py-2">
+            <div class="card text-bg-dark my-2 titulo-img">
+                <img src="img/banne1.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay text-center fondo-transparencia">
+                    <h1 class="card-title">Nuestra Carta</h1>
+                    <p class="card-text">Disfruta de la mejor experiencia en Café Buen Aroma.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pt-2 texto-pri">
+
+            <div class="menu-filters text-center">
+                <button class="filter-btn m-1 active" data-category="all">Todos</button>
+                <button class="filter-btn m-1" data-category="cafe">Cafés</button>
+                <button class="filter-btn m-1" data-category="te">Tés</button>
+                <button class="filter-btn m-1" data-category="bebida">Bebidas</button>
+                <button class="filter-btn m-1" data-category="postre">Postres</button>
+                <button class="filter-btn m-1" data-category="comida">Comida</button>
+            </div>
+
+            <div class="menu-section my-5" data-category="cafe">
+                <h2 class="titulo-2">Café</h2>
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/cafe-expresso.jpg" alt="cafe expresso" class="item-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Expreso</h5>
+                                <p class="card-text texto-trunc-2">Café negro intenso servido en taza pequeña.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 8.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/cafe-americano.jpg" alt="cafe americano">
+                            <div class="card-body">
+                                <h5 class="card-title">Americano</h5>
+                                <p class="card-text texto-trunc-2">Expreso diluido en agua caliente.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 10.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/Capuchinoo.jpg" alt="capuchino">
+                            <div class="card-body">
+                                <h5 class="card-title">Capuchino</h5>
+                                <p class="card-text texto-trunc-2">Expreso con leche vaporizada y espuma.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/latte.jpg" alt="latte">
+                            <div class="card-body">
+                                <h5 class="card-title">Latte</h5>
+                                <p class="card-text texto-trunc-2">Expreso con más leche y poca espuma.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 10.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/mocca.jpg" alt="mocca">
+                            <div class="card-body">
+                                <h5 class="card-title">Moca</h5>
+                                <p class="card-text texto-trunc-2">Capuchino con chocolate.</p>
+                            </div>
+                            <div class="card-footer item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section my-5" data-category="te">
+                <h2 class="titulo-2">Té</h2>
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/te-negro.jpg" alt="te negro">
+                            <div class="card-body">
+                                <h5 class="card-title">Té Negro</h5>
+                                <p class="card-text texto-trunc-2">Tradicional té negro de la mejor calidad.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 8.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/te-verde.jpg" alt="te verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Té Verde</h5>
+                                <p class="card-text texto-trunc-2">Té verde con propiedades antioxidantes.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 10.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/manzanilla.jpg" alt="manzanilla">
+                            <div class="card-body">
+                                <h5 class="card-title">Manzanilla</h5>
+                                <p class="card-text texto-trunc-2">Infusión relajante de manzanilla.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section my-5" data-category="bebida">
+                <h2 class="titulo-2">Bebida</h2>
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/iced-cofee.jpg" alt="ice coffe">
+                            <div class="card-body">
+                                <h5 class="card-title">Iced Coffee</h5>
+                                <p class="card-text texto-trunc-2">Café frío con hielo y leche.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/frappe.jpg" alt="frappe">
+                            <div class="card-body">
+                                <h5 class="card-title">Frappé</h5>
+                                <p class="card-text texto-trunc-2">Café batido con hielo y crema.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 15.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/limonada.jpg" alt="limonada">
+                            <div class="card-body">
+                                <h5 class="card-title">Limonada</h5>
+                                <p class="card-text texto-trunc-2">Refrescante limonada natural.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section my-5" data-category="postre">
+                <h2 class="titulo-2">Postre</h2>
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/cheescake.jpg" alt="cheescake">
+                            <div class="card-body">
+                                <h5 class="card-title">Cheesecake</h5>
+                                <p class="card-text texto-trunc-2">Tarta de queso con frutos rojos.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/tiramisu.jpg" alt="tiramisu">
+                            <div class="card-body">
+                                <h5 class="card-title">Tiramisú</h5>
+                                <p class="card-text texto-trunc-2">Postre italiano con café y cacao.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 15.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/brownies.jpg" alt="brownies">
+                            <div class="card-body">
+                                <h5 class="card-title">Brownie</h5>
+                                <p class="card-text texto-trunc-2">Brownie de chocol-6 col-md-6 col-lg-4 col-xl-3ate con nueces.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section my-5" data-category="comida">
+                <h2 class="titulo-2">Comida</h2>
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/Sandwich-Club.jpg" alt="sandwich club">
+                            <div class="card-body">
+                                <h5 class="card-title">Sandwich Club</h5>
+                                <p class="card-text texto-trunc-2">Pollo, tocino, lechuga, tomate y mayonesa.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/ensalada-cesar.jpg" alt="ensalada cesar">
+                            <div class="card-body">
+                                <h5 class="card-title">Ensalada César</h5>
+                                <p class="card-text texto-trunc-2">Lechuga, pollo, croutones y aderezo césar.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 15.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-2 menu-item">
+                            <img src="img/Quiche-Lorraine.jpg" alt="quiche lorraine">
+                            <div class="card-body">
+                                <h5 class="card-title">Quiche Lorraine</h5>
+                                <p class="card-text texto-trunc-2">Tarta salada con huevo, crema y tocino.</p>
+                            </div>
+                            <div class="card-body item-price">
+                                <h2 class="texto-pri">S/ 12.00</h2>
+                                <button class="add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row">
+                <h2 class="heading-2 titulo-2">Promociones Especiales</h2>
+                <div class="col-6">
+                    <div class="card my-2 menu-item">
+                        <img src="img/promocion1.jpg" alt="Promoción 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Desayuno Completo</h5>
+                            <p class="card-text">Café + Sandwich + Jugo por solo S/ 25.00</p>
+                            <span class="badge bg-success">Código: DESAYUNO25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card my-2 menu-item">
+                        <img src="img/promocion2.jpg" alt="Promoción 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Martes de Postre</h5>
+                            <p class="card-text">20% de descuento en todos nuestros postres los martes</p>
+                            <span class="badge bg-success">Código: DULCE20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <header th:replace="~{/fragments/layout :: footer}"></header>
+
+    <script src="https://kit.fontawesome.com/d4c2353910.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="js/carta.js"></script>
+</body>
+
+</html>

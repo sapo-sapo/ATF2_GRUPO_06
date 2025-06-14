@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/fragments/layout :: head('blogs')}"></head>
+
+<body>
+
+  <header th:replace="~{/fragments/layout :: header}"></header>
+  
+  <main>
+    <section class="container py-2">
+      <div class="card text-bg-dark my-2 titulo-img">
+        <img src="img/banne1.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay text-center fondo-transparencia">
+          <h1 class="card-title">Blogs</h1>
+          <p class="card-text">Disfruta de la mejor experiencia en Café Buen Aroma.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row py-4">
+        <div th:each="blog : ${blogs}" class="col-sm-6 col-lg-4">
+          <div class="card my-2" style="width: 100%;">
+            <img src="img/blog1.jpg" alt="Imagen Blog 1">
+            <div class="card-body">
+              <h5 class="card-title">[[${blog}]]</h5>
+              <span>20 Marzo 2025</span>
+              <p class="card-text">Descubre cómo esta bebida milenaria ha viajado por el mundo, desde sus orígenes en
+                Etiopía
+                hasta convertirse en un fenómeno global.</p>
+
+              <a href="#" class="boton">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card my-2" style="width: 100%;">
+            <img src="img/blog1.jpg" alt="Imagen Blog 1">
+            <div class="card-body">
+              <h5 class="card-title">La historia del café</h5>
+              <span>20 Marzo 2025</span>
+              <p class="card-text">Descubre cómo esta bebida milenaria ha viajado por el mundo, desde sus orígenes en
+                Etiopía
+                hasta convertirse en un fenómeno global.</p>
+
+              <a href="#" class="boton">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card my-2" style="width: 100%;">
+            <img src="img/blog2.jpg" alt="Imagen Blog 2">
+            <div class="card-body">
+              <h5 class="card-title">Nuestras especialidades</h5>
+              <span>20 Marzo 2025</span>
+              <p class="card-text">Conoce las bebidas únicas que ofrecemos, elaboradas con ingredientes frescos y de
+                calidad,
+                perfectas para cada paladar.</p>
+              <a href="#" class="boton">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card my-2" style="width: 100%;">
+            <img src="img/blog3.jpg" alt="Imagen Blog 3">
+            <div class="card-body">
+              <h5 class="card-title">ventos en la cafetería</h5>
+              <span>20 Marzo 2025</span>
+              <p class="card-text">Infórmate sobre los próximos eventos y actividades que organizamos, desde catas de
+                café
+                hasta noches de música en vivo.</p>
+              <a href="#" class="boton">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid">
+      <div class="row mb-5">
+        <div class="col-sm-3">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <img src="img/galeria1.jpg" alt="Gallery Img1" class="galeria" />
+            </div>
+            <div class="col-12 mt-2">
+              <img src="img/galeria2.jpg" alt="Gallery Img2" class="galeria">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <img src="img/galeria3.jpg" alt="Gallery Img3" class="galeria">
+        </div>
+        <div class="col-sm-3">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <img src="img/galeria4.jpg" alt="Gallery Img4" class="galeria">
+            </div>
+            <div class="col-12 mt-2">
+              <img src="img/galeria5.jpg" alt="Gallery Img5" class="galeria">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <header th:replace="~{/fragments/layout :: footer}"></header>
+
+  <script src="https://kit.fontawesome.com/d4c2353910.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="js/carta.js"></script>
+</body>
+
+</html>

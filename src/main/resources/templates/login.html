@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/fragments/layout :: head('login')}"></head>
+
+<body>
+
+    <header th:replace="~{/fragments/layout :: header}"></header>
+
+    <main th:if="${esCliente}">
+    
+        <section class="login-hero">
+            <div class="container">
+                <h1>Bienvenido</h1>
+                <p>Disfruta de los beneficios exclusivos</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="login-benefits">
+                <div class="benefit-card">
+                    <i class="fa-solid fa-percent"></i>
+                    <h3>Descuentos Exclusivos</h3>
+                    <p>Accede a ofertas especiales solo para miembros registrados</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <h3>Historial de Pedidos</h3>
+                    <p>Revisa y repite tus pedidos anteriores fácilmente</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fa-solid fa-gift"></i>
+                    <h3>Programa de Puntos</h3>
+                    <p>Acumula puntos con cada compra y canjéalos por premios</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <header th:replace="~{/fragments/layout :: footer}"></header>
+
+    <script src="https://kit.fontawesome.com/d4c2353910.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="js/carta.js"></script>
+</body>
+
+</html>

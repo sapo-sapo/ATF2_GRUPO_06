@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+
+<head th:replace="~{/fragments/layout :: head('inicio')}"></head>
+
+  <body>
+    <header th:replace="~{/fragments/layout :: header}"></header>
+    <main>
+      <section>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+    
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <section class="banner" style="background-image: url('img/banne1.jpg');">
+                <div class="contenido-banner">
+                  <p>Café Delicioso</p>
+                  <h2>100% Natural <br>Café Fresco</h2>
+                  <a class="boton" href="carta.html">Comprar ahora</a>
+                </div>
+              </section>
+            </div>
+    
+            <div class="carousel-item">
+              <section class="banner" style="background-image: url('img/banner2.jpg');">
+                <div class="contenido-banner">
+                  <p>Sabores Únicos</p>
+                  <h2>Sabores unicos y variados <br>Para que disfrutes de una buena taza de café</h2>
+                  <a class="boton" href="contacto.html">Ver más</a>
+                </div>
+              </section>
+            </div>
+    
+            <div class="carousel-item">
+              <section class="banner" style="background-image: url('img/banne3.jpg');">
+                <div class="contenido-banner">
+                  <p>Ambiente Acogedor</p>
+                  <h2>Disfruta tu Momento <br>Con Nosotros</h2>
+                  <a class="boton" href="reservas.html">Visítanos</a>
+                </div>
+              </section>
+            </div>
+          </div>
+    
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>  
+      </section>
+      <section class="container">
+        <div class="row mb-5 mt-2 pt-2">
+          <div class="col-12 col-lg-6 col-xl-3 mb-2">
+            <div class="card mb-3 tarjeta-pri">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <i class="icono-grande fa-solid fa-motorcycle"></i>
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <h6 class="fw-bolder card-title">Envíos gratuitos a todo Lima</h6>
+                    <p class="card-text">En pedidos superiores a $15.00.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-3 mb-2">
+            <div class="card mb-3 tarjeta-pri">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <i class="icono-grande fa-solid fa-wallet"></i>
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <h6 class="fw-bolder card-title">Contrareembolso</h6>
+                    <p class="card-text">100% garantía de devolución de su dinero.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-3 mb-2">
+            <div class="card mb-3 tarjeta-pri">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <i class="icono-grande fa-solid fa-gift"></i>
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <h6 class="fw-bolder card-title">Tarjeta regalo especial</h6>
+                    <p class="card-text">Ofrece promociones especiales.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-3 mb-2">
+            <div class="card mb-3 tarjeta-pri">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <i class="icono-grande fa-solid fa-headset"></i>
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <h6 class="fw-bolder card-title">Servicio A1</h6>
+                    <p class="card-text">Cerca de usted, contáctenos al 123-456-789.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <h1 class="text-center heading-1 titulo titulo">Mejores Categorías</h1>
+        
+        <div class="row mb-5">
+          <div class="col-12 col-lg-4">
+            <div class="card text-bg-dark m-2 item-zoom">
+              <img src="img/mocaa.jpg" class="card-img" alt="Cafe moca">
+              <div class="card-img-overlay text-center fondo-transparencia">
+                <h4 class="card-title">Café moca</h4>
+                <a class="text-decoration-none text-light" href="#">Ver más</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="card text-bg-dark m-2 item-zoom">
+              <img src="img/expreso.jpg" class="card-img" alt="Expreso Americano">
+              <div class="card-img-overlay text-center fondo-transparencia">
+                <h4 class="card-title">Expreso Americano</h4>
+                <a class="text-decoration-none text-light" href="#">Ver más</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="card text-bg-dark m-2 item-zoom">
+              <img src="img/capuchino.jpg" class="card-img" alt="Capuchino">
+              <div class="card-img-overlay text-center fondo-transparencia">
+                <h4 class="card-title">Capuchino</h4>
+                <a class="text-decoration-none text-light" href="#">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="container">
+        <h1 class="text-center heading-1 titulo">Mejores Productos</h1>
+
+        <div class="row mb-5">
+          <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-2 menu-item">
+              <img src="img/cafe-expresso.jpg" alt="cafe expresso" class="item-img">
+              <div class="card-body">
+                <h5 class="card-title">Expreso</h5>
+                <p class="card-text texto-trunc-2">Café negro intenso servido en taza pequeña.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 8.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-2 menu-item">
+              <img src="img/cafe-americano.jpg" alt="cafe americano">
+              <div class="card-body">
+                <h5 class="card-title">Americano</h5>
+                <p class="card-text texto-trunc-2">Expreso diluido en agua caliente.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 10.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-2 menu-item">
+              <img src="img/Capuchinoo.jpg" alt="capuchino">
+              <div class="card-body">
+                <h5 class="card-title">Capuchino</h5>
+                <p class="card-text texto-trunc-2">Expreso con leche vaporizada y espuma.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 12.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-2 menu-item">
+              <img src="img/latte.jpg" alt="latte">
+              <div class="card-body">
+                <h5 class="card-title">Latte</h5>
+                <p class="card-text texto-trunc-2">Expreso con más leche y poca espuma.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 10.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-fluid">
+        <div class="row mb-5">
+          <div class="col-sm-3">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <img src="img/galeria1.jpg" alt="Gallery Img1" class="galeria" />
+              </div>
+              <div class="col-12 mt-2">
+                <img src="img/galeria2.jpg" alt="Gallery Img2" class="galeria">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="img/galeria3.jpg" alt="Gallery Img3" class="galeria">
+          </div>
+          <div class="col-sm-3">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <img src="img/galeria4.jpg" alt="Gallery Img4" class="galeria">
+              </div>
+              <div class="col-12 mt-2">
+                <img src="img/galeria5.jpg" alt="Gallery Img5" class="galeria">
+              </div>
+            </div></div>
+        </div>          
+      </section>
+
+      <section class="container">
+        <h1 class="text-center heading-1 titulo">Especiales</h1>
+
+        <div class="row mb-5">
+          <div class="col-6 col-lg-3">
+            <div class="card my-2 menu-item">
+              <img src="img/cafe-expresso.jpg" alt="cafe expresso" class="item-img">
+              <div class="card-body">
+                <h5 class="card-title">Expreso</h5>
+                <p class="card-text texto-trunc-2">Café negro intenso servido en taza pequeña.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 8.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card my-2 menu-item">
+              <img src="img/cafe-americano.jpg" alt="cafe americano">
+              <div class="card-body">
+                <h5 class="card-title">Americano</h5>
+                <p class="card-text texto-trunc-2">Expreso diluido en agua caliente.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 10.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card my-2 menu-item">
+              <img src="img/Capuchinoo.jpg" alt="capuchino">
+              <div class="card-body">
+                <h5 class="card-title">Capuchino</h5>
+                <p class="card-text texto-trunc-2">Expreso con leche vaporizada y espuma.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 12.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card my-2 menu-item">
+              <img src="img/latte.jpg" alt="latte">
+              <div class="card-body">
+                <h5 class="card-title">Latte</h5>
+                <p class="card-text texto-trunc-2">Expreso con más leche y poca espuma.</p>
+              </div>
+              <div class="card-body item-price">
+                <h2 class="texto-pri">S/ 10.00</h2>
+                <button class="add-to-cart">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <h1 class="heading-1 titulo text-center">ÚLTIMOS BLOGS</h1>
+
+        <div class="row py-4">
+          <div class="col-sm-12 col-lg-4">
+            <div class="card my-2" style="width: 100%;">
+              <img src="img/blog1.jpg" alt="Imagen Blog 1">
+              <div class="card-body">
+                <h5 class="card-title">La historia del café</h5>
+                <span>20 Marzo 2025</span>
+                <p class="card-text">Descubre cómo esta bebida milenaria ha viajado por el mundo, desde sus orígenes en Etiopía
+                  hasta convertirse en un fenómeno global.</p>
+                <a href="#" class="boton">Leer más</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-lg-4">
+            <div class="card my-2" style="width: 100%;">
+              <img src="img/blog2.jpg" alt="Imagen Blog 2">
+              <div class="card-body">
+                <h5 class="card-title">Nuestras especialidades</h5>
+                <span>20 Marzo 2025</span>
+                <p class="card-text">Conoce las bebidas únicas que ofrecemos, elaboradas con ingredientes frescos y de calidad,
+                  perfectas para cada paladar.</p>
+                <a href="#" class="boton">Leer más</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-lg-4">
+            <div class="card my-2" style="width: 100%;">
+              <img src="img/blog3.jpg" alt="Imagen Blog 3">
+              <div class="card-body">
+                <h5 class="card-title">ventos en la cafetería</h5>
+                <span>20 Marzo 2025</span>
+                <p class="card-text">Infórmate sobre los próximos eventos y actividades que organizamos, desde catas de café
+                  hasta noches de música en vivo.</p>
+                <a href="#" class="boton">Leer más</a>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <header th:replace="~{/fragments/layout :: footer}"></header>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form action="">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar Sessión</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="usuario">Usuarios</label>
+              <input class="form-control mb-3" type="usuario">
+              
+              <label for="contra">Contraseña</label>
+              <input class="form-control mb-3" type="text">
+              
+              <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+              
+              <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-success">Ingresar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d4c2353910.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
+    <script src="js/carta.js"></script>
+  </body>
+
+</html>

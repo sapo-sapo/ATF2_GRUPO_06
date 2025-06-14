@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/clientes.css">
+    <title>Sistema de Gestión - Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Gestión</h1>
+            <p>Administración de Base de Datos</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" data-section="usuarios">👥 Usuarios</button>
+            <button class="nav-btn" data-section="clientes">🛍️ Clientes</button>
+            <button class="nav-btn" data-section="categorias">📂 Categorías</button>
+            <button class="nav-btn" data-section="productos">📦 Productos</button>
+            <button class="nav-btn" data-section="pedidos">🛒 Pedidos</button>
+            <button class="nav-btn" data-section="detalles">📋 Detalles Pedidos</button>
+            <button class="nav-btn" data-section="reservas">📅 Reservas</button>
+            <button class="nav-btn" data-section="blogs">📝 Blogs</button>
+            <button class="nav-btn" data-section="feedback">💬 Feedback</button>
+        </div>
+
+        <!-- USUARIOS -->
+        <div id="usuarios-section" class="table-section">
+            <h2 class="section-title">
+                <div class="section-icon">👥</div>
+                Gestión de Usuarios
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Total Usuarios</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Usuarios Activos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Administradores</div>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="usuario-nombre">Nombre</label>
+                    <input type="text" id="usuario-nombre" placeholder="Ingrese nombre completo">
+                </div>
+                <div class="form-group">
+                    <label for="usuario-email">Correo Electrónico</label>
+                    <input type="email" id="usuario-email" placeholder="correo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="usuario-password">Contraseña</label>
+                    <input type="password" id="usuario-password" placeholder="Contraseña segura">
+                </div>
+                <div class="form-group">
+                    <label for="usuario-rol">Rol</label>
+                    <select id="usuario-rol">
+                        <option value="">Seleccionar rol</option>
+                        <option value="admin">Administrador</option>
+                        <option value="editor">Editor</option>
+                        <option value="user">Usuario</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary">➕ Agregar Usuario</button>
+                <button class="btn btn-success">💾 Guardar Cambios</button>
+                <button class="btn btn-warning">🔄 Actualizar</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Buscar usuarios...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>juan@ejemplo.com</td>
+                        <td>admin</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>María García</td>
+                        <td>maria@ejemplo.com</td>
+                        <td>editor</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Carlos López</td>
+                        <td>carlos@ejemplo.com</td>
+                        <td>user</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CLIENTES -->
+        <div id="clientes-section" class="table-section hidden">
+            <h2 class="section-title">
+                <div class="section-icon">🛍️</div>
+                Gestión de Clientes
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">Total Clientes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">89</div>
+                    <div class="stat-label">Clientes Activos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Nuevos Este Mes</div>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="cliente-nombre">Nombre</label>
+                    <input type="text" id="cliente-nombre" placeholder="Nombre completo del cliente">
+                </div>
+                <div class="form-group">
+                    <label for="cliente-email">Correo Electrónico</label>
+                    <input type="email" id="cliente-email" placeholder="correo@cliente.com">
+                </div>
+                <div class="form-group">
+                    <label for="cliente-password">Contraseña</label>
+                    <input type="password" id="cliente-password" placeholder="Contraseña del cliente">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary">➕ Agregar Cliente</button>
+                <button class="btn btn-success">💾 Guardar Cambios</button>
+                <button class="btn btn-warning">🔄 Actualizar</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Buscar clientes...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Fecha Registro</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ana Martínez</td>
+                        <td>ana@cliente.com</td>
+                        <td>2024-01-15</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Roberto Silva</td>
+                        <td>roberto@cliente.com</td>
+                        <td>2024-02-10</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Laura Fernández</td>
+                        <td>laura@cliente.com</td>
+                        <td>2024-03-05</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CATEGORÍAS -->
+        <div id="categorias-section" class="table-section hidden">
+            <h2 class="section-title">
+                <div class="section-icon">📂</div>
+                Gestión de Categorías
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Total Categorías</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categorías Activas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">245</div>
+                    <div class="stat-label">Productos Asociados</div>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="categoria-nombre">Nombre de Categoría</label>
+                    <input type="text" id="categoria-nombre" placeholder="Nombre de la categoría">
+                </div>
+                <div class="form-group">
+                    <label for="categoria-descripcion">Descripción</label>
+                    <textarea id="categoria-descripcion" placeholder="Descripción de la categoría"></textarea>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary">➕ Agregar Categoría</button>
+                <button class="btn btn-success">💾 Guardar Cambios</button>
+                <button class="btn btn-warning">🔄 Actualizar</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Buscar categorías...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Productos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Electrónicos</td>
+                        <td>Dispositivos electrónicos y tecnología</td>
+                        <td>45</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ropa</td>
+                        <td>Vestimenta y accesorios</td>
+                        <td>89</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hogar</td>
+                        <td>Artículos para el hogar</td>
+                        <td>67</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div id="productos-section" class="table-section hidden">
+            <h2 class="section-title">
+                <div class="section-icon">📦</div>
+                Gestión de Productos
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">342</div>
+                    <div class="stat-label">Total Productos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">298</div>
+                    <div class="stat-label">En Stock</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">44</div>
+                    <div class="stat-label">Agotados</div>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="producto-categoria">Categoría</label>
+                    <select id="producto-categoria">
+                        <option value="">Seleccionar categoría</option>
+                        <option value="1">Electrónicos</option>
+                        <option value="2">Ropa</option>
+                        <option value="3">Hogar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="producto-nombre">Nombre del Producto</label>
+                    <input type="text" id="producto-nombre" placeholder="Nombre del producto">
+                </div>
+                <div class="form-group">
+                    <label for="producto-descripcion">Descripción</label>
+                    <textarea id="producto-descripcion" placeholder="Descripción del producto"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="producto-precio">Precio</label>
+                    <input type="number" id="producto-precio" step="0.01" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label for="producto-stock">Stock</label>
+                    <input type="number" id="producto-stock" placeholder="Cantidad disponible">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary">➕ Agregar Producto</button>
+                <button class="btn btn-success">💾 Guardar Cambios</button>
+                <button class="btn btn-warning">🔄 Actualizar</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Buscar productos...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoría</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Electrónicos</td>
+                        <td>Smartphone Pro Max</td>
+                        <td>$899.99</td>
+                        <td>25</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ropa</td>
+                        <td>Camiseta Premium</td>
+                        <td>$29.99</td>
+                        <td>150</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hogar</td>
+                        <td>Lámpara LED</td>
+                        <td>$45.50</td>
+                        <td>0</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PEDIDOS -->
+        <div id="pedidos-section" class="table-section hidden">
+            <h2 class="section-title">
+                <div class="section-icon">🛒</div>
+                Gestión de Pedidos
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1,245</div>
+                    <div class="stat-label">Total Pedidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">89</div>
+                    <div class="stat-label">Pendientes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1,156</div>
+                    <div class="stat-label">Completados</div>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="pedido-usuario">Usuario</label>
+                    <select id="pedido-usuario">
+                        <option value="">Seleccionar usuario</option>
+                        <option value="1">Juan Pérez</option>
+                        <option value="2">María García</option>
+                        <option value="3">Carlos López</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pedido-cliente">Cliente</label>
+                    <select id="pedido-cliente">
+                        <option value="">Seleccionar cliente</option>
+                        <option value="1">Ana Martínez</option>
+                        <option value="2">Roberto Silva</option>
+                        <option value="3">Laura Fernández</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pedido-fecha">Fecha y Hora</label>
+                    <input type="datetime-local" id="pedido-fecha">
+                </div>
+                <div class="form-group">
+                    <label for="pedido-total">Total</label>
+                    <input type="number" id="pedido-total" step="0.01" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label for="pedido-estado">Estado</label>
+                    <select id="pedido-estado">
+                        <option value="">Seleccionar estado</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="procesando">Procesando</option>
+                        <option value="enviado">Enviado</option>
+                        <option value="entregado">Entregado</option>
+                        <option value="cancelado">Cancelado</option>

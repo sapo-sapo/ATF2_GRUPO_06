@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head th:fragment="head(titulo)">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[[${titulo}]]</title>
+        <meta name="description"
+            content="Contáctanos para reservas, eventos o cualquier consulta. Estamos disponibles para atenderte.">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/estilos.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top fondo-sec text-light" data-bs-theme="dark">
+              <div class="container">
+                <a class="navbar-brand" href="inicio.php">El Buen Aroma</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse py-2" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item"><a class="nav-link active" href="inicio.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="carta.php">La carta</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reservas.php">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.php">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.php">Contactános</a></li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <div class="input-group">
+                      <input type="text" class="fondo-transparencia border-light text-light form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2">
+                      <button class="btn btn-outline-light" type="submit" id="button-addon2">
+                        <i class="fa-solid fa-search"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="py-2">
+                  <button type="button" class="btn btn-outline-light rounded-pill position-relative mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa-solid fa-user"></i>
+                  </button>          
+      
+                  <button type="button" class="cart-icon btn btn-outline-light rounded-pill position-relative ml-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="content-shopping-cart position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </nav>
+        </header>  
+        <footer class="fondo-pri texto-sec">
+          <div class="container">
+              <div class="row py-2">
+              <div class="col-sm-6 col-lg-3 py-2">
+                  <p class="text-uppercase fw-bold">Informacion del contacto</p>
+                  <ul>
+                      <li>Dirección: Av. cualquiera xd  #123</li>
+                      <li>Teléfono: 123-456-789</li>
+                      <li>WhatsApp: 923-456-789</li>
+                      <li>Email: CaféBuenAroma@gmail.com</li>
+                  </ul>
+                  <div class="fs-1">
+                      <span class="mx-2"> <i class="fa-brands fa-facebook-f"></i> </span>
+                      <span class="mx-2"> <i class="fa-brands fa-square-x-twitter"></i> </span>
+                      <span class="mx-2"> <i class="fa-brands fa-tiktok"></i> </span>
+                      <span class="mx-2"> <i class="fa-brands fa-instagram"></i> </span>
+                      <span class="mx-2"> <i class="fa-brands fa-linkedin"></i> </span>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 py-2">
+                  <p class="text-uppercase fw-bold">Informacion</p>
+                  <ul>
+                      <li><a href="#"></a>Acerca de nosotros</li>
+                      <li><a href="reservas.html"></a>Información delivery</li>
+                      <li><a href="#"></a>Politicas de privacidad</li>
+                      <li><a href="#"></a>Terminos y condiciones</li>
+                      <li><a href="contacto.html"></a>Contactános</li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-lg-3 py-2">
+                  <p class="text-uppercase fw-bold">Mi cuenta</p>
+                  <ul>
+                      <li><a href="login.html"></a>Mi cuenta</li>
+                      <li><a href="#"></a>Historial de ordenes</li>
+                      <li><a href="#"></a>Lista de deseos</li>
+                      <li><a href="#"></a>Boletín</li>
+                      <li><a href="#"></a>Reembolsos</li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-lg-3 py-2">
+                  <p class="text-uppercase fw-bold">Boletín informativo</p>
+                  <div class="content">
+                      <p>
+                          Suscríbete a nuestros boletines ahora y manten al
+                          día con nuevas colecciones y ofertas exclusivas.
+                      </p>
+                      <input class="form-control border-light bg-transparent mb-2" type="email" placeholder="Ingresa el correo aqui..." data-bs-theme="dark">
+                      <button class="boton-sec">Suscríbete</button>
+                  </div>
+              </div>
+              </div>
+              <hr>
+              <div class="text-center py-2">
+                  <p>2024</p>
+              </div>
+          </div>
+        </footer>  
+    </body>
+</html>

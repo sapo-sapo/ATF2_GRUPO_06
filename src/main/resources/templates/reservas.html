@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/fragments/layout :: head('reservas')}"></head>
+
+<body>
+
+    <header th:replace="~{/fragments/layout :: header}"></header>
+
+    <main>
+        <section class="container py-2">
+            <div class="card text-bg-dark my-2 titulo-img">
+                <img src="img/banne1.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay text-center fondo-transparencia">
+                  <h1 class="card-title">Reserva tu Mesa</h1>
+                  <p class="card-text">Disfruta de la mejor experiencia en Café Buen Aroma.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h2 class="heading-2 titulo-2">Formulario de Reserva</h2>
+                            <form id="reservationForm" class="reservation-form">
+                                <label for="reservation-name">Nombre Completo*</label>
+                                <input class="form-control mb-2" type="text" id="reservation-name" required>
+        
+                                <label for="reservation-email">Correo Electrónico*</label>
+                                <input class="form-control mb-2" type="email" id="reservation-email" required>
+        
+                                <label for="reservation-phone">Teléfono*</label>
+                                <input class="form-control mb-2" type="tel" id="reservation-phone" required>
+            
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="reservation-date">Fecha*</label>
+                                        <input class="form-control mb-2" type="date" id="reservation-date" required>
+                                    </div>
+            
+                                    <div class="col">
+                                        <label for="reservation-time">Hora*</label>
+                                        <input class="form-control mb-2" type="time" id="reservation-time" min="08:00" max="22:00" required>
+                                    </div>
+                                </div>
+            
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="reservation-guests">Número de Personas*</label>
+                                        <select class="form-control mb-2" id="reservation-guests" required>
+                                            <option value="" disabled selected>Seleccione</option>
+                                            <option value="1">1 persona</option>
+                                            <option value="2">2 personas</option>
+                                            <option value="3">3 personas</option>
+                                            <option value="4">4 personas</option>
+                                            <option value="5">5 personas</option>
+                                            <option value="6">6 personas</option>
+                                            <option value="7">7 personas</option>
+                                            <option value="8">8+ personas</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="col">
+                                        <label for="reservation-area">Área Preferida</label>
+                                        <select class="form-control mb-2" id="reservation-area">
+                                            <option value="" disabled selected>Seleccione</option>
+                                            <option value="interior">Interior</option>
+                                            <option value="exterior">Exterior</option>
+                                            <option value="terraza">Terraza</option>
+                                            <option value="barra">Barra</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
+                                <label for="reservation-notes">Notas Adicionales</label>
+                                <textarea class="form-control mb-2" id="reservation-notes" rows="4"
+                                    placeholder="Alergias, requerimientos especiales, etc."></textarea>
+        
+                                <button type="submit" class="boton">Reservar Mesa</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h3><i class="fa-solid fa-clock"></i> Horario</h3>
+                            <ul class="schedule-list">
+                                <li><span>Lunes a Viernes:</span> 8:00 AM - 10:00 PM</li>
+                                <li><span>Sábados:</span> 9:00 AM - 11:00 PM</li>
+                                <li><span>Domingos:</span> 9:00 AM - 9:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h3><i class="fa-solid fa-location-dot"></i> Ubicación</h3>
+                            <p>Av. Café 123, Lima Centro, Perú</p>
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.965646038717!2d-77.0371289851876!3d-12.046353291465445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAyJzQ2LjkiUzc3KsDA0JzMxLjYiVw!5e0!3m2!1ses!2spe!4v1620000000000!5m2!1ses!2spe"
+                                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h3><i class="fa-solid fa-info-circle"></i> Políticas de Reserva</h3>
+                            <ul class="policy-list">
+                                <li>Reservas con al menos 2 horas de anticipación</li>
+                                <li>Máximo 15 minutos de tolerancia</li>
+                                <li>Grupos mayores a 6 personas contactarnos</li>
+                                <li>Cancelaciones con 24 horas de anticipación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row">
+                <h2 class="heading-2 titulo-2">Lo que dicen nuestros clientes</h2>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="fst-italic texto-trunc-2">"El ambiente perfecto para disfrutar un café de calidad. Siempre reservo mesa en la
+                                terraza."</p>
+                            <div class="cliente-info">
+                                <img src="img/cliente1.jpg" alt="Cliente 1">
+                                <div>
+                                    <h4>María Gómez</h4>
+                                    <span>Cliente frecuente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="fst-italic texto-trunc-2">"Reservé para una reunión de trabajo y el servicio fue excelente. Muy recomendado."</p>
+                            <div class="cliente-info">
+                                <img src="img/cliente2.jpg" alt="Cliente 2">
+                                <div>
+                                    <h4>Harry Styles</Style>
+                                    </h4>
+                                    <span>Primera visita</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <header th:replace="~{/fragments/layout :: footer}"></header>
+
+    <script src="https://kit.fontawesome.com/d4c2353910.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="js/carta.js"></script>
+</body>
+
+</html>
