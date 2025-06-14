@@ -23,7 +23,7 @@ public class UsuarioServices {
     }
 
     public Usuario insertUpdate(Usuario Usuario) {
-        return repository.save(Usuario);
+        return repository.save(Usuario); 
     }
 
     public void delete(Integer id) {
