@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/clientes.css">
+    <title>Sistema de Gestión - Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Gestión</h1>
+            <p>Administración de Base de Datos</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" data-section="usuarios">👥 Usuarios</button>
+            <button class="nav-btn" data-section="clientes">🛍️ Clientes</button>
+            <button class="nav-btn" data-section="categorias">📂 Categorías</button>
+            <button class="nav-btn" data-section="productos">📦 Productos</button>
+            <button class="nav-btn" data-section="pedidos">🛒 Pedidos</button>
+            <button class="nav-btn" data-section="detalles">📋 Detalles Pedidos</button>
+            <button class="nav-btn" data-section="reservas">📅 Reservas</button>
+            <button class="nav-btn" data-section="blogs">📝 Blogs</button>
+            <button class="nav-btn" data-section="feedback">💬 Feedback</button>
+        </div>
+
+        <!-- PEDIDOS -->
+        <div id="pedidos-section" class="table-section hidden">
+            <h2 class="section-title">
+                <div class="section-icon">🛒</div>
+                Gestión de Pedidos
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1,245</div>
+                    <div class="stat-label">Total Pedidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">89</div>
+                    <div class="stat-label">Pendientes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1,156</div>
+                    <div class="stat-label">Completados</div>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="pedido-usuario">Usuario</label>
+                    <select id="pedido-usuario">
+                        <option value="">Seleccionar usuario</option>
+                        <option value="1">Juan Pérez</option>
+                        <option value="2">María García</option>
+                        <option value="3">Carlos López</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pedido-cliente">Cliente</label>
+                    <select id="pedido-cliente">
+                        <option value="">Seleccionar cliente</option>
+                        <option value="1">Ana Martínez</option>
+                        <option value="2">Roberto Silva</option>
+                        <option value="3">Laura Fernández</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pedido-fecha">Fecha y Hora</label>
+                    <input type="datetime-local" id="pedido-fecha">
+                </div>
+                <div class="form-group">
+                    <label for="pedido-total">Total</label>
+                    <input type="number" id="pedido-total" step="0.01" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label for="pedido-estado">Estado</label>
+                    <select id="pedido-estado">
+                        <option value="">Seleccionar estado</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="procesando">Procesando</option>
+                        <option value="enviado">Enviado</option>
+                        <option value="entregado">Entregado</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

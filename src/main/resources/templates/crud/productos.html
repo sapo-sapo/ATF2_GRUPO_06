@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/clientes.css">
+    <title>Sistema de Gestión - Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Gestión</h1>
+            <p>Administración de Base de Datos</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" data-section="usuarios">👥 Usuarios</button>
+            <button class="nav-btn" data-section="clientes">🛍️ Clientes</button>
+            <button class="nav-btn" data-section="categorias">📂 Categorías</button>
+            <button class="nav-btn" data-section="productos">📦 Productos</button>
+            <button class="nav-btn" data-section="pedidos">🛒 Pedidos</button>
+            <button class="nav-btn" data-section="detalles">📋 Detalles Pedidos</button>
+            <button class="nav-btn" data-section="reservas">📅 Reservas</button>
+            <button class="nav-btn" data-section="blogs">📝 Blogs</button>
+            <button class="nav-btn" data-section="feedback">💬 Feedback</button>
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div id="productos-section" class="table-section">
+            <h2 class="section-title">
+                <div class="section-icon">📦</div>
+                Gestión de Productos
+            </h2>
+
+            <div class="form-grid">
+                <form method="post" th:action="@{/crud/productos/guardarProductos}" th:object="${producto}">
+                    <input type="hidden" th:field="*{id}"/>
+                    <div class="form-group">
+                        <label for="producto-categoria">Categoría</label>
+                        <select id="producto-categoria" th:field="*{categoria}">
+                            <option value="" disabled>Seleccionar categoría</option>
+                            <option th:each="cat : ${categorias}" th:value="${cat.id}"th:text="${cat.nombre}" required></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="producto-nombre">Nombre del Producto</label>
+                        <input type="text" id="producto-nombre" placeholder="Nombre del producto" th:field="*{nombre}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="producto-descripcion">Descripción</label>
+                        <textarea id="producto-descripcion" placeholder="Descripción del producto" th:field="*{descripcion}" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="producto-precio">Precio</label>
+                        <input type="number" id="producto-precio" step="0.01" placeholder="0.00" th:field="*{precio}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="producto-stock">Stock</label>
+                        <input type="number" id="producto-stock" placeholder="Cantidad disponible" th:field="*{stock}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">💾 Guardar Producto</button>
+                </form>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoría</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="productos : ${mostrar}">
+                        <td>[[${productos.id}]]</td>
+                        <td>[[${productos.categoria.nombre}]]</td>
+                        <td>[[${productos.nombre}]]</td>
+                        <td>[[${productos.descripcion}]]</td>                   
+                        <td>[[${productos.precio}]]</td>
+                        <td>[[${productos.stock}]]</td>
+                        <td class="action-buttons">
+                            <a th:href="@{/crud/productos/editarProductos(id=${productos.id})}" class="action-btn edit-btn">✏️</a>
+                            <form th:action="@{/crud/productos/eliminarProductos(id=${productos.id})}" method="post"><button type="submit" class="btn btn-danger btn-sm" >🗑️</button></form>
+                        </td>
+                    </tr>                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script th:src="@{/js/confirmar.js}"></script>
+</body>

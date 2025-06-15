@@ -31,11 +31,6 @@ public class NavegadorController {
         return "reservas";
     }
 
-    @GetMapping("/admin/clientes")
-    public String clientes() {
-        return "admin/clientes";
-    }
-
     @GetMapping("/blog.php")
     public String blog(Model model) {
         List<String> blogs = new ArrayList<>();

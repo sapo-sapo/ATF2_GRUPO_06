@@ -18,10 +18,7 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cliente")
     private Integer id;
-    @Column(name = "Nombre")
     private String nombre;
-    @Column(name = "Correo_Electronico")
     private String correo;
-    @Column(name = "Consetraña")
     private String contrasena;
 }

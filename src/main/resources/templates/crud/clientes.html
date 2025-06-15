@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/clientes.css">
+    <title>Sistema de Gestión - Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Gestión</h1>
+            <p>Administración de Base de Datos</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" data-section="usuarios">👥 Usuarios</button>
+            <button class="nav-btn" data-section="clientes">🛍️ Clientes</button>
+            <button class="nav-btn" data-section="categorias">📂 Categorías</button>
+            <button class="nav-btn" data-section="productos">📦 Productos</button>
+            <button class="nav-btn" data-section="pedidos">🛒 Pedidos</button>
+            <button class="nav-btn" data-section="detalles">📋 Detalles Pedidos</button>
+            <button class="nav-btn" data-section="reservas">📅 Reservas</button>
+            <button class="nav-btn" data-section="blogs">📝 Blogs</button>
+            <button class="nav-btn" data-section="feedback">💬 Feedback</button>
+        </div>
+
+        <!-- USUARIOS -->
+        <div id="usuarios-section" class="table-section">
+            <h2 class="section-title">
+                <div class="section-icon">🛍️</div>
+                Gestión de Clientes
+            </h2>
+
+            <div class="form-grid">
+                <form th:action="@{/crud/clientes/guardarClientes}" th:object="${cliente}" method="post">
+                    <input type="hidden" th:field="*{id}"/>
+                    <div class="form-group">
+                        <label for="usuario-nombre">Nombre</label>
+                        <input type="text" id="usuario-nombre" placeholder="Ingrese nombre completo" th:field="*{nombre}">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario-email">Correo Electrónico</label>
+                        <input type="email" id="usuario-email" placeholder="correo@ejemplo.com" th:field="*{correo}">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario-password">Contraseña</label>
+                        <input type="text" id="usuario-password" placeholder="Contraseña segura" th:field="*{contrasena}">
+                    </div>
+                    <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">💾 Guardar Usuario</button>
+            </div>
+                </form>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Contraseña</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="clientes : ${mostrar}">
+                        <td>[[${clientes.id}]]</td>
+                        <td>[[${clientes.nombre}]]</td>
+                        <td>[[${clientes.correo}]]</td>
+                        <td>[[${clientes.contrasena}]]</td>                        
+                        <td class="action-buttons">
+                            <a th:href="@{/crud/clientes/editarClientes(id=${clientes.id})}" class="action-btn edit-btn">✏️</a>
+                            <form th:action="@{/crud/clientes/eliminarClientes(id=${clientes.id})}" method="post"><button type="submit" class="btn btn-danger btn-sm" onclick= "return Confirmar()">🗑️</button></form>
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script th:src="@{/js/confirmar.js}"></script>
+</body>
+
+        

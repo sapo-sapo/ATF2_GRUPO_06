@@ -18,8 +18,6 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
     private Integer id;
-    @Column(name = "Nombre")
     private String nombre;
-    @Column(name = "Descripcion")
     private String descripcion;
 }

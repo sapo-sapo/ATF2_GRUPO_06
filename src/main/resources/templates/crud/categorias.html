@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/clientes.css">
+    <title>Sistema de Gestión - Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Gestión</h1>
+            <p>Administración de Base de Datos</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" data-section="usuarios">👥 Usuarios</button>
+            <button class="nav-btn" data-section="clientes">🛍️ Clientes</button>
+            <button class="nav-btn" data-section="categorias">📂 Categorías</button>
+            <button class="nav-btn" data-section="productos">📦 Productos</button>
+            <button class="nav-btn" data-section="pedidos">🛒 Pedidos</button>
+            <button class="nav-btn" data-section="detalles">📋 Detalles Pedidos</button>
+            <button class="nav-btn" data-section="reservas">📅 Reservas</button>
+            <button class="nav-btn" data-section="blogs">📝 Blogs</button>
+            <button class="nav-btn" data-section="feedback">💬 Feedback</button>
+        </div>
+        
+        <div id="categorias-section" class="table-section hidden">
+            <h2 class="section-title">
+                <div class="section-icon">📂</div>
+                Gestión de Categorías
+            </h2>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="categoria-nombre">Nombre de Categoría</label>
+                    <input type="text" id="categoria-nombre" placeholder="Nombre de la categoría">
+                </div>
+                <div class="form-group">
+                    <label for="categoria-descripcion">Descripción</label>
+                    <textarea id="categoria-descripcion" placeholder="Descripción de la categoría"></textarea>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary">💾 Guardar Categoría</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Buscar categorías...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Productos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Electrónicos</td>
+                        <td>Dispositivos electrónicos y tecnología</td>
+                        <td>45</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ropa</td>
+                        <td>Vestimenta y accesorios</td>
+                        <td>89</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hogar</td>
+                        <td>Artículos para el hogar</td>
+                        <td>67</td>
+                        <td class="action-buttons">
+                            <button class="action-btn view-btn">👁️</button>
+                            <button class="action-btn edit-btn">✏️</button>
+                            <button class="action-btn delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

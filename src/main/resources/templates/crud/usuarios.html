@@ -50,33 +50,25 @@
             </div>
 
             <div class="form-grid">
-                <div class="form-group">
-                    <label for="usuario-nombre">Nombre</label>
-                    <input type="text" id="usuario-nombre" placeholder="Ingrese nombre completo">
-                </div>
-                <div class="form-group">
-                    <label for="usuario-email">Correo Electrónico</label>
-                    <input type="email" id="usuario-email" placeholder="correo@ejemplo.com">
-                </div>
-                <div class="form-group">
-                    <label for="usuario-password">Contraseña</label>
-                    <input type="password" id="usuario-password" placeholder="Contraseña segura">
-                </div>
-                <div class="form-group">
-                    <label for="usuario-rol">Rol</label>
-                    <select id="usuario-rol">
-                        <option value="">Seleccionar rol</option>
-                        <option value="admin">Administrador</option>
-                        <option value="editor">Editor</option>
-                        <option value="user">Usuario</option>
-                    </select>
-                </div>
+                <form th:action="@{/admin/clientes/guardarClientes}" th:object="${cliente}" method="post">
+                    <input type="hidden" th:field="*{id}"/>
+                    <div class="form-group">
+                        <label for="usuario-nombre">Nombre</label>
+                        <input type="text" id="usuario-nombre" placeholder="Ingrese nombre completo" th:field="*{nombre}">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario-email">Correo Electrónico</label>
+                        <input type="email" id="usuario-email" placeholder="correo@ejemplo.com" th:field="*{correo}">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario-password">Contraseña</label>
+                        <input type="password" id="usuario-password" placeholder="Contraseña segura" th:field="*{contrasena}">
+                    </div>
+                </form>
             </div>
 
             <div class="btn-group">
-                <button class="btn btn-primary">➕ Agregar Usuario</button>
-                <button class="btn btn-success">💾 Guardar Cambios</button>
-                <button class="btn btn-warning">🔄 Actualizar</button>
+                <button type="sumbit" class="btn btn-primary">💾 Guardar Usuario</button>
             </div>
 
             <div class="search-bar">
@@ -89,20 +81,19 @@
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Correo Electrónico</th>
-                        <th>Rol</th>
+                        <th>Contraseña</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Juan Pérez</td>
-                        <td>juan@ejemplo.com</td>
-                        <td>admin</td>
+                    <tr th:each="clientes:${mostrar}">
+                        <td>[[${clientes.id}]]</td>
+                        <td>[[${clientes.nombre}]]</td>
+                        <td>[[${clientes.correo}]]</td>
+                        <td>[[${clientes.contrasena}]]</td>                        
                         <td class="action-buttons">
-                            <button class="action-btn view-btn">👁️</button>
-                            <button class="action-btn edit-btn">✏️</button>
-                            <button class="action-btn delete-btn">🗑️</button>
+                            <button th:href="@{/admin/clientes/editarClientes(id=${cliente.id})}" class="action-btn edit-btn">✏️</button>
+                            <form th:action="@{/admin/clientes/eliminarClientes(id=${cliente.id})}" method="post"><button type="submit" class="btn btn-danger btn-sm" onclick=Confirmar()>Eliminar</button></form>
                         </td>
                     </tr>
                     <tr>
